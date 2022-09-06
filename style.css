@@ -1,0 +1,46 @@
+img {
+  width: 30px;
+}
+
+.countery {
+  padding: 0px 15px;
+  border: 1px solid gainsboro;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  height: 60px;
+}
+.search-box input {
+  border: 1px solid gainsboro;
+  padding: 0px 10px;
+  height: 60px;
+  width: 98%;
+  position: relative;
+  border-radius: 5px;
+  outline: none;
+  font-size: 20px;
+}
+
+.search-box {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+i.fas.fa-search {
+  top: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+  right: 20px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.countery img {
+  margin-right: 15px;
+}
+
+.countery h5 {
+  font-family: monospace;
+  font-size: 18px;
+}

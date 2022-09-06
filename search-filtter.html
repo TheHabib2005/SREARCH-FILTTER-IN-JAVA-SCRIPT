@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEARCH-FILTER IN JAVA-SCRIPT</title>
+    <!-- ================   FONT-AWSOME LINK =========== -->
+    <link
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="search-box">
+      <input type="text" class="search-bar" placeholder="Search Countrey" />
+      <i class="fas fa-search"></i>
+    </div>
+    <div class="country-list">
+      <div class="countery">
+        <img src="./img/Flag_of_Bangladesh-4096x2453 (1).png" alt="" />
+        <h5>Bangladesh</h5>
+      </div>
+      <div class="countery">
+        <img src="./img/Flag_of_Afghanistan-4096x2731.png" alt="" />
+        <h5>Afghanistan</h5>
+      </div>
+      <div class="countery">
+        <img src="./img/Flag_of_Argentina-4096x2560.png" alt="" />
+        <h5>Argentina</h5>
+      </div>
+      <div class="countery">
+        <img src="./img/Flag_of_Denmark-4096x3088.png" alt="" />
+        <h5>Denmark</h5>
+      </div>
+      <div class="countery">
+        <img src="./img/Flag_of_India-4096x2731.png" alt="" />
+        <h5>India</h5>
+      </div>
+      <div class="countery">
+        <img src="./img/Flag_of_Gambia-4096x2731.png" alt="" />
+        <h5>Gambia</h5>
+      </div>
+      <div class="countery">
+        <img src="./img/Flag_of_Angola-4096x2731.png" alt="" />
+        <h5>Angola</h5>
+      </div>
+      <div class="countery">
+        <img src="./img/Flag_of_Russia-4096x2731.png" alt="" />
+        <h5>Russia</h5>
+      </div>
+      <div class="countery">
+        <img src="./img/Flag_of_Vatican_City.png" alt="" />
+        <h5>Vatican City</h5>
+      </div>
+      <div class="countery">
+        <img src="./img/Flag_of_Botswana-4096x2731 (1).png" alt="" />
+        <h5>Botswana</h5>
+      </div>
+      <div class="countery">
+        <img src="./img/Flag_of_United_Kingdom-4096x2048 (1).png" alt="" />
+        <h5>United Kingdom</h5>
+      </div>
+      <div class="countery">
+        <img src="./img/Flag_of_United_States-4096x2156.png" alt="" />
+        <h5>United States</h5>
+      </div>
+      <div class="countery">
+        <img src="./img/Flag_of_Sweden-4096x2545.png" alt="" />
+        <h5>Sweden</h5>
+      </div>
+      <!-- dfvds -->
+    </div>
+    <script>
+      var search = document.querySelector(".search-bar");
+
+      search.addEventListener("keyup", () => {
+        var search_value = document
+          .querySelector(".search-bar")
+          .value.toUpperCase();
+
+        const list = document.querySelectorAll(".countery");
+
+        list.forEach((countery) => {
+          const countrey_name = countery
+            .querySelector("h5")
+            .textContent.toUpperCase();
+
+          if (countrey_name.indexOf(search_value) > -1) {
+            countery.style.display = "";
+          } else {
+            countery.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
